@@ -1,1 +1,1 @@
-# ITMO-557
+# ITMO-557 Repository for Homework Assignments
