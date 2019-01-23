@@ -10,6 +10,8 @@ Big, in this sense, is actually a reference to amount more than size. It refers 
 One example of a company that contributes large amounts of data, is Facebook. With over a billions accounts, Facebook has become a behemoth data aggregating machine. With millions and millions of users pouring their data into Facebook, Mark Zuckerberg, has been happily taking this data and selling it whoever is willing to pay. No wonder he's worth billions of dollars!
 ## 3. What is information-centric data.  How does it differ from server-centric storage architecture.
 Data that is information-centric is managed via a storage network that does not rely on the servers. This data can be thought of as being stored on storage devices that are all part of the same network and readily available to talk to each other.
+
+I've never experienced a server-centric architecture, but I'm assuming that it was, for the IT department, the bane of their existence. In a server-centric architecture, the data is independently handled by each server. There is nothing that can be used to manage data from 2 different servers at the same time. This not only increases the risk for unavailability of information, but also causes the maintenance requirements for the servers to skyrocket. Not a favorable situation!
 ## 4. Explain virtualization.  Give examples.
 
 ## 5. Explain the 7 key characteristics of a data center.
