@@ -13,5 +13,8 @@ Data that is information-centric is managed via a storage network that does not 
 
 I've never experienced a server-centric architecture, but I'm assuming that it was, for the IT department, the bane of their existence. In a server-centric architecture, the data is independently handled by each server. There is nothing that can be used to manage data from 2 different servers at the same time. This not only increases the risk for unavailability of information, but also causes the maintenance requirements for the servers to skyrocket. Not a favorable situation!
 ## 4. Explain virtualization.  Give examples.
+Virtualization, in a broad sense, is simply taking physical resources and abstracting them in a way that makes them seem as if they are logical resources. These logical resources can be then used as physical resources upon which an independent OS can be installed. This is an amazing advantage when it comes to computing and maintenance. Virtual OSs can be booted up and destroyed in a matter of seconds. They can also be manipulated in terms of physical resource allocation(memory, hard disk space, and processing power).
 
+There are several examples of virtualization in the modern world. Virtually all cloud computing is done using resources that were allocated using virtualization. If one has experience with AWS, then it is easy to tell that any EC2 instance that is launched basically just a virtual machine running on a server somewhere. On personal computers, enthusiasts are free to run a legion of different open and closed source OSs that are readily available on the internet via VmWare or Vitualbox.
 ## 5. Explain the 7 key characteristics of a data center.
+
