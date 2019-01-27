@@ -21,10 +21,32 @@ Even though a DAS environment is easy and simple to deploy, it is very difficult
 # Chapter 3
 
 ## 1. What is software RAID.  Give examples.
+In simple terms, it is any piece of software that runs ona computer and provides limited RAID functionality (software RAID cannot mimic hardware RAID perfectly). 
 
-
+Ex: mdadm is a utility in Linux that allows for the implementation of software RAID. raidtools is another tool for Linux distributions. Windows 8 has a RAID technology called Storage Spaces. 
 ## 2. Explain RAID-corrected IOPS on a disk for RAID 5.
+Ok, so let's start with how many IOPS a specific task/application might take. If we take 5200 IOPS, as it is in the textbook, and assume a 60 percent read and 40 percent write ratio, we then look at the formula.
+> (readPercentage * generatedIOPS + writepenaltyofRAID5 * (writePercentage * generatedIOPS))
+
+This function asks us to use the read and write percentages of the task/application, the number of IOPS generated, and the write penalty of the RAID setting you're working with. For us, this would be a write penalty of 4 since we are working with RAID 5. Therefore, our final formula would look like this:
+> (0.6 * 5200 + 4 * (0.4 * 5200))
+
+> (3120 + 4 * (2080))
+
+> (3120 + 8320)
+
+> 11,440 IOPS
+
+### Now, what is going on up here ↑↑↑
+
+This formula is trying to tell us what the disk load will be on the specific RAID configuration you are using. This formula calculated a disk load of 11,440 IOPS. This means that now we can try and determine the number of disks needed to run the task/application. Assuming that each disk allows for a maximum of 180 IOPS, we would need:
+
+> 11,440/180 = 64 disks
+
+Therefore, the RAID corrected IOPS for this particular task/application would be 11,440 and we would need 64 disks with a max IOPS limit of 180 to handle them.
 
 ## 3. Explain write penalty in RAID 6.
+Well RAID 6 has a heavy write penalty, though many storage engineers accept this as a necessary sacrifice when compared to the benefits of RAID 6. RAID 6 maintains a dual parity, this means that in terms of read operations, it needs 2 parity operations and 1 data operation. After this, there are also 3 write operations, 2 parity operations and 1 I/O operation. This means RAID 6 performs 6 I/O operation for each write. This means the write penalty for RAID 6 is 6.
 
 ## 4. What kind of applications are best suited for RAID 3.
+Any applications that need large sequential data access (video/music streaming, backing up data) will receive great performance from RAID 3.
