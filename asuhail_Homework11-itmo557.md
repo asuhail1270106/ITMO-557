@@ -68,5 +68,14 @@
     to determine how easy it is to add or terminate cloud services with the
     service provider. The consumer should know how easy it is to move to
     another provider, when required. They must assess how the provider
-    fulfi lls the security, legal, and privacy requirements. They should also
+    fulfills the security, legal, and privacy requirements. They should also
     check whether the provider offers good customer service support.
+
+    Cloud service providers typically mention
+    quality of service (QoS) attributes such as throughput and uptime,
+    along with cloud services. The QoS attributes are generally part of an
+    SLA, which is the service contract between the provider and the consumers.
+    The SLA serves as the foundation for the expected level of service
+    between the consumer and the provider. Before adopting the cloud
+    services, consumers should check whether the QoS attributes meet their
+    requirements.
