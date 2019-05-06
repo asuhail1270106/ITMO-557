@@ -6,4 +6,4 @@
 
 ### 3. Explain how monitoring is used
 
-### 4. Explain multi tenancy
+### 4. Explain multi-tenancy
